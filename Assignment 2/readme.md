@@ -27,7 +27,7 @@ Our codebase accesses the datasets from `/data/MNIST_assignment/` by default.
 ### Models
 
 - LeNet5 : # of Params - 61,706
-- CustomMLP : # of Params - 62,170
+- CustomMLP : # of Params - 61,450
 
 
 ### Report 1
@@ -52,7 +52,7 @@ To do so, you need some statistics such as average loss values and accuracy at t
 
 ![Screenshot 2024-04-14 at 16 06 44](https://github.com/ma-kjh/Neural-Networks-and-Deep-Learning-2024-1st/assets/132344612/f0e5d3c0-9ada-478f-9aab-34c143b88cb6)
 
-`In our case, we use input size (28,28,1).`
+`In our case, we transform input size (28,28,1) to (32,32,1) because in LeNet5 architectures, if we want to use C5 (self.conv3, not FC layer) layer, we should receive feature map size (5x5).`
 
 ```python
     def __init__(self):
@@ -62,6 +62,8 @@ To do so, you need some statistics such as average loss values and accuracy at t
         self.conv3 = nn.Conv2d(16, 120, kernel_size=5, stride=1) # # of params : (5 * 5 * 16 * 120) + (1 * 120) = 48,120
         
         self.subsampling = nn.MaxPool2d(kernel_size=(2,2), stride=None) 
+        
+        self.activation = nn.ReLU()
         
         self.fc1 = nn.Linear(120, 84) # # of params : (120 * 84) + (1 * 84) = 10,164
         self.fc2 = nn.Linear(84, 10) # # of params : (84 * 10) + (1 * 10) = 850
@@ -74,13 +76,17 @@ To do so, you need some statistics such as average loss values and accuracy at t
 ```python
     def __init__(self):
         super().__init__()
-        self.fc1 = nn.Linear(784, 64) # # of params : 50,176 + 64 = 50,240
-        self.fc2 = nn.Linear(64, 64) # # of params : 4,096 + 64 = 4,160
-        self.fc3 = nn.Linear(64, 64) # # of params : 4,096 + 64 = 4,160
-        self.fc4 = nn.Linear(64, 48) # # of params : 3,072 + 48 = 3,120
-        self.fc5 = nn.Linear(48, 10) # # of params : 480 + 10 = 490
+        self.fc1 = nn.Linear(1024, 48) # # of params : (32 * 32 * 1 * 48) + 48 = 49,152 + 48 = 49,200
+        self.fc2 = nn.Linear(48, 48) # # of params : (48 * 48) + 48 = 2,304 + 48 = 2,352
+        self.fc3 = nn.Linear(48, 48) # # of params : (48 * 48) + 48 = 2,304 + 48 = 2,352
+        self.fc4 = nn.Linear(48, 48) # # of params : (48 * 48) + 48 = 2,304 + 48 = 2,352
+        self.fc5 = nn.Linear(48, 48) # # of params : (48 * 48) + 48 = 2,304 + 48 = 2,352
+        self.fc6 = nn.Linear(48, 48) # # of params : (48 * 48) + 48 = 2,304 + 48 = 2,352
+        self.fc7 = nn.Linear(48, 10) # # of params : 480 + 10 = 490
         
-        ## total # of params : 50,240 + 4,160 + 4,160 + 3,120 + 490 = 62,170
+        self.activation = nn.ReLU()
+        
+        ## total # of params : 49,200 + 2,352 + 2,352 + 2,352 + 2,352 + 2,352 + 490 = 61,450
 ```
 
 
