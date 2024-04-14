@@ -1,23 +1,44 @@
 ## MNIST Classification
 
-In this assignment, you build a neural network classifier with MNIST dataset. For a detailed description about MNIST dataset, please refer to this link.
 
-Due date: 2024. 04. 16. Tue 23:59
+In this Assignment, We build a neural network classifier with MNIST dataset.
 
-Submission: Personal Github repo URL
+
+### Get Started
 
 `dataset.py, model.py, main.py , README.md (Report) files`
 
-`Total score: High/Medium/Low`
+```
+├── ...
+├── results
+│   ├── checkpoints
+│   └── plots
+├── dataset.py
+├── model.py
+├── main.py
+```
 
-Requirements
+### Data
 
-You should write your own pipeline to provide data to your model. Write your code in the template dataset.py. 
+The MNIST database of handwritten digits, available from this page, has a training set of 60,000 examples, and a test set of 10,000 examples. You can download [here](http://yann.lecun.com/exdb/mnist/)
 
-Please read the comments carefully and follow those instructions.
+Our codebase accesses the datasets from `/data/MNIST_assignment/` by default.
 
-(Report) Implement LeNet-5 and your custom MLP models in model.py. Some instructions are given in the file as comments. Note that your custom MLP model should have about the same number of model parameters with LeNet-5. Describe the number of model parameters of LeNet-5 and your custom MLP and how to compute them in your report.
+### Models
+
+- LeNet5 : # of Params - 61,706
+- CustomMLP : # of Params - 62,170
+
+### (Report 1)
+
+Implement LeNet-5 and your custom MLP models in model.py. Some instructions are given in the file as comments. Note that your custom MLP model should have about the same number of model parameters with LeNet-5. Describe the number of model parameters of LeNet-5 and your custom MLP and how to compute them in your report.
 Write main.py to train your models, LeNet-5 and custom MLP. Here, you should monitor the training process. To do so, you need some statistics such as average loss values and accuracy at the end of each epoch.
+
+
+
+
+
+
 
 (Report) Plot above statistics, average loss value and accuracy, for training and testing. It is fine to use the test dataset as a validation dataset. Therefore, you will have four plots for each model: loss and accuracy curves for training and test datasets, respectively.
 
