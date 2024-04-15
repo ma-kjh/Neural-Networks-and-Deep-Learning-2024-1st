@@ -125,6 +125,8 @@ So, the modification of provided MNIST class in dataset.py may be needed.
 
 `In our case, we emply two regularization techniques, L2 Regularization (SGD weight decay) and BatchNorm.`
 
+`As you can see, L2 Reg and BatchNorm can improve the validation performance than original one.`
+
 ![Report2_LeNet5_trn_val_sep](https://github.com/ma-kjh/Neural-Networks-and-Deep-Learning-2024-1st/assets/132344612/d6a1da9c-a682-41b8-a02d-230d3f17244a)
 
 ![Report2_LeNet5_trn_val_com](https://github.com/ma-kjh/Neural-Networks-and-Deep-Learning-2024-1st/assets/132344612/ad28a8b7-ed98-47cb-8211-08d46e60b7aa)
