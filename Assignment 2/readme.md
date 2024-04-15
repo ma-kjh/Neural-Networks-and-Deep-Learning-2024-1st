@@ -11,7 +11,6 @@ In this Assignment, We build a neural network classifier with MNIST dataset.
 ```
 ├── ...
 ├── results
-│   ├── checkpoints
 │   └── plots
 ├── dataset.py
 ├── model.py
@@ -100,6 +99,8 @@ It is fine to use the test dataset as a validation dataset.
 Therefore, you will have four plots for each model: loss and accuracy curves for training and test datasets, respectively.
 ```
 
+
+
 ### Report 3
 
 ```
@@ -114,4 +115,4 @@ Keep in mind that when you employ the data augmentation technique, it should be 
 So, the modification of provided MNIST class in dataset.py may be needed.
 ```
 
-
+`In our case, we emply two regularization techniques, L2 Regularization and BatchNorm.`
