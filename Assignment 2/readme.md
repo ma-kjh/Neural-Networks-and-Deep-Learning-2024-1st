@@ -98,7 +98,15 @@ It is fine to use the test dataset as a validation dataset.
 
 Therefore, you will have four plots for each model: loss and accuracy curves for training and test datasets, respectively.
 ```
+![Report2_LeNet5_trn_val_sep](https://github.com/ma-kjh/Neural-Networks-and-Deep-Learning-2024-1st/assets/132344612/ceb7ab5a-a388-4cef-ab7b-45424a88fcad)
 
+
+![Report2_LeNet5_trn_val_com](https://github.com/ma-kjh/Neural-Networks-and-Deep-Learning-2024-1st/assets/132344612/9a96b543-c13a-40b6-a440-c6f157a3cfc9)
+
+
+![Report2_CustomMLP_trn_val_sep](https://github.com/ma-kjh/Neural-Networks-and-Deep-Learning-2024-1st/assets/132344612/753dd158-0a20-4ff6-a90c-f8de6b513e1f)
+
+![Report2_CustomMLP_trn_val_com](https://github.com/ma-kjh/Neural-Networks-and-Deep-Learning-2024-1st/assets/132344612/740a1c4d-f69d-4d89-a52a-c911f3c3791f)
 
 
 ### Report 3
@@ -115,4 +123,10 @@ Keep in mind that when you employ the data augmentation technique, it should be 
 So, the modification of provided MNIST class in dataset.py may be needed.
 ```
 
-`In our case, we emply two regularization techniques, L2 Regularization and BatchNorm.`
+`In our case, we emply two regularization techniques, L2 Regularization (SGD weight decay) and BatchNorm.`
+
+![Report2_LeNet5_trn_val_sep](https://github.com/ma-kjh/Neural-Networks-and-Deep-Learning-2024-1st/assets/132344612/d6a1da9c-a682-41b8-a02d-230d3f17244a)
+
+![Report2_LeNet5_trn_val_com](https://github.com/ma-kjh/Neural-Networks-and-Deep-Learning-2024-1st/assets/132344612/ad28a8b7-ed98-47cb-8211-08d46e60b7aa)
+
+
