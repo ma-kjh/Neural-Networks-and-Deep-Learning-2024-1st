@@ -98,15 +98,36 @@ It is fine to use the test dataset as a validation dataset.
 
 Therefore, you will have four plots for each model: loss and accuracy curves for training and test datasets, respectively.
 ```
+
+`LeNet5 trn val`
+```
+12|12 - TRAIN LOSS : 1.4692
+12|12 - TRAIN ACC : 0.9934
+12|12 - VAL LOSS : 1.4740
+12|12 - VAL ACC : 0.9888
+```
+
 ![Report2_LeNet5_trn_val_sep](https://github.com/ma-kjh/Neural-Networks-and-Deep-Learning-2024-1st/assets/132344612/ceb7ab5a-a388-4cef-ab7b-45424a88fcad)
 
 
 ![Report2_LeNet5_trn_val_com](https://github.com/ma-kjh/Neural-Networks-and-Deep-Learning-2024-1st/assets/132344612/9a96b543-c13a-40b6-a440-c6f157a3cfc9)
 
 
+
+
+`CustomMLP trn val`
+```
+12|12 - TRAIN LOSS : 1.5100
+12|12 - TRAIN ACC : 0.9517
+12|12 - VAL LOSS : 1.5127
+12|12 - VAL ACC : 0.9489
+```
+
 ![Report2_CustomMLP_trn_val_sep](https://github.com/ma-kjh/Neural-Networks-and-Deep-Learning-2024-1st/assets/132344612/753dd158-0a20-4ff6-a90c-f8de6b513e1f)
 
 ![Report2_CustomMLP_trn_val_com](https://github.com/ma-kjh/Neural-Networks-and-Deep-Learning-2024-1st/assets/132344612/740a1c4d-f69d-4d89-a52a-c911f3c3791f)
+
+
 
 
 ### Report 3
@@ -125,7 +146,17 @@ So, the modification of provided MNIST class in dataset.py may be needed.
 
 `In our case, we emply two regularization techniques, L2 Regularization (SGD weight decay) and BatchNorm.`
 
-`As you can see, L2 Reg and BatchNorm can improve the validation performance than original one.`
+`As you can see, L2 Reg and BatchNorm can improve little bit the validation performance than original one.`
+
+
+
+`LeNet5-Reg trn val`
+```
+12|12 - TRAIN LOSS : 1.4694
+12|12 - TRAIN ACC : 0.9936
+12|12 - VAL LOSS : 1.4730
+12|12 - VAL ACC : 0.9894 
+```
 
 ![Report2_LeNet5_trn_val_sep](https://github.com/ma-kjh/Neural-Networks-and-Deep-Learning-2024-1st/assets/132344612/d6a1da9c-a682-41b8-a02d-230d3f17244a)
 
