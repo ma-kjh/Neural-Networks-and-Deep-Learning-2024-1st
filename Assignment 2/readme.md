@@ -329,9 +329,6 @@ TEST ACC : 0.9532
 `First of all, we want to make the model work properly when dataset(test or val) that had not been seen in training will be received. However, as you can see, the gap of training and validation measurements gets bigger when epochs are increased. You should mitigate this effect of overfitting by using some regularization or other techniques.`
 
 
-### Report 3
-
-
 
 <details>
 <summary> LeNet Reg trn val Log </summary>
