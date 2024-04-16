@@ -17,6 +17,9 @@ In this Assignment, We build a neural network classifier with MNIST dataset.
 ├── main.py
 ```
 
+### Script
+`CUDA_VISIBLE_DEIVCES=# python main.py`
+
 ### Data
 
 The MNIST database of handwritten digits, available from this page, has a training set of 60,000 examples, and a test set of 10,000 examples. You can download [here](http://yann.lecun.com/exdb/mnist/)
