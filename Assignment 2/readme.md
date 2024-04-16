@@ -454,5 +454,5 @@ TEST ACC : 0.9914
 ![Report2_LeNet5_reg_trn_val_sep](https://github.com/ma-kjh/Neural-Networks-and-Deep-Learning-2024-1st/assets/132344612/388dd726-9d77-4775-aee9-97dfce83cc2c)
 
 
-`In our case, we emply two regularization techniques, L2 Regularization (SGD weight decay) and BatchNorm. As you can see, L2 Reg and BatchNorm can improve little bit the validation performance than original one.`
+`In our case, we emply two regularization techniques, L2 Regularization (SGD weight decay) and BatchNorm. As you can see, L2 Reg and BatchNorm can improve little bit the validation performance than original one. (98.76 vs 99.14)`
 
