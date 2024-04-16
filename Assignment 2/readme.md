@@ -72,33 +72,59 @@ Our codebase accesses the datasets from `/data/MNIST_assignment/` by default.
 LeNet5 has 61,706 parameters and CustomMLP has 61,450 parameters. They have similar parameters.
 
 
-### Report 2
+### Experiments
 
+<details>
+<summary> LeNet5 trn val </summary>
+<div>
 
-#### LeNet5 trn val
 
 ```
-12|12 - TRAIN LOSS : 1.4692
-12|12 - TRAIN ACC : 0.9934
-12|12 - VAL LOSS : 1.4740
-12|12 - VAL ACC : 0.9888
+LENET TRAIN AND TEST
+TRAIN START!
+1|20 - 5.0 % finished
+1|20 - TRAIN LOSS : 1.7266
+1|20 - TRAIN ACC : 0.7801
+1|20 - VAL LOSS : 1.5113
+1|20 - VAL ACC : 0.9584
+2|20 - 10.0 % finished
+2|20 - TRAIN LOSS : 1.5026
+2|20 - TRAIN ACC 
 ```
 
-![Report2_LeNet5_trn_val_sep](https://github.com/ma-kjh/Neural-Networks-and-Deep-Learning-2024-1st/assets/132344612/ceb7ab5a-a388-4cef-ab7b-45424a88fcad)
+</div>
+</details>
 
-
-![Report2_LeNet5_trn_val_com](https://github.com/ma-kjh/Neural-Networks-and-Deep-Learning-2024-1st/assets/132344612/9a96b543-c13a-40b6-a440-c6f157a3cfc9)
 
 
 
 
 #### CustomMLP trn val
+
+<details>
+<summary> LeNet5 trn val </summary>
+<div>
+
+
 ```
-12|12 - TRAIN LOSS : 1.5100
-12|12 - TRAIN ACC : 0.9517
-12|12 - VAL LOSS : 1.5127
-12|12 - VAL ACC : 0.9489
+LENET TRAIN AND TEST
+TRAIN START!
+1|20 - 5.0 % finished
+1|20 - TRAIN LOSS : 1.7266
+1|20 - TRAIN ACC : 0.7801
+1|20 - VAL LOSS : 1.5113
+1|20 - VAL ACC : 0.9584
+2|20 - 10.0 % finished
+2|20 - TRAIN LOSS : 1.5026
+2|20 - TRAIN ACC : 0.9655
+2|20 - VAL LOSS : 1.4890
+2|20 - VAL ACC : 0.9766
+
 ```
+
+</div>
+</details>
+
 
 ![Report2_CustomMLP_trn_val_sep](https://github.com/ma-kjh/Neural-Networks-and-Deep-Learning-2024-1st/assets/132344612/753dd158-0a20-4ff6-a90c-f8de6b513e1f)
 
