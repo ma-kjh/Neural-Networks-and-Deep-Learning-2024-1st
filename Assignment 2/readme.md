@@ -29,24 +29,6 @@ Our codebase accesses the datasets from `/data/MNIST_assignment/` by default.
 - CustomMLP : # of Params - 61,450
 
 
-### Report 1
-
-```
-Implement LeNet-5 and your custom MLP models in model.py.
-
-Some instructions are given in the file as comments.
-
-Note that your custom MLP model should have about the same number of model parameters with LeNet-5.
-
-Describe the number of model parameters of LeNet-5 and your custom MLP and how to compute them in your report.
-
-Write main.py to train your models, LeNet-5 and custom MLP.
-
-Here, you should monitor the training process.
-
-To do so, you need some statistics such as average loss values and accuracy at the end of each epoch.
-```
-
 #### LeNet5
 
 ![Screenshot 2024-04-14 at 16 06 44](https://github.com/ma-kjh/Neural-Networks-and-Deep-Learning-2024-1st/assets/132344612/f0e5d3c0-9ada-478f-9aab-34c143b88cb6)
@@ -62,7 +44,7 @@ To do so, you need some statistics such as average loss values and accuracy at t
         
         self.subsampling = nn.MaxPool2d(kernel_size=(2,2), stride=None) 
         
-        self.activation = nn.ReLU()
+        self.activation = nn.Tanh()
         
         self.fc1 = nn.Linear(120, 84) # # of params : (120 * 84) + (1 * 84) = 10,164
         self.fc2 = nn.Linear(84, 10) # # of params : (84 * 10) + (1 * 10) = 850
@@ -83,10 +65,12 @@ To do so, you need some statistics such as average loss values and accuracy at t
         self.fc6 = nn.Linear(48, 48) # # of params : (48 * 48) + 48 = 2,304 + 48 = 2,352
         self.fc7 = nn.Linear(48, 10) # # of params : 480 + 10 = 490
         
-        self.activation = nn.ReLU()
+        self.activation = nn.Tanh()
         
         ## total # of params : 49,200 + 2,352 + 2,352 + 2,352 + 2,352 + 2,352 + 490 = 61,450
 ```
+
+LeNet5 has 61,706 parameters and CustomMLP has 61,450 parameters. 
 
 
 ### Report 2
