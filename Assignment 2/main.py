@@ -7,57 +7,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 # import some packages you need here
 
-def plotting(trn_val_loss, trn_val_acc, modelname='LeNet5'):
 
-    trn_loss = trn_val_loss[0]
-    val_loss = trn_val_loss[1]
-    
-    trn_acc = trn_val_acc[0]
-    val_acc = trn_val_acc[1]
-    
-    x = list(range(1, len(trn_loss)+1))
-
-    plt.figure(figsize=(10,10))
-    plt.subplot(2, 1, 1)
-    plt.plot(x, trn_loss, label='trn_loss')
-    plt.plot(x, val_loss, label='val_loss')
-    plt.title(f"{modelname} trn val loss")
-    plt.legend()
-    
-    plt.subplot(2, 1, 2)
-    plt.plot(x, trn_acc, label='trn_acc')
-    plt.plot(x, val_acc, label='val_acc')
-    plt.title(f"{modelname} trn val acc")
-    plt.legend()
-    
-    
-    plt.savefig(f"./results/plots/Report2_{modelname}_trn_val_com.png")
-    
-    plt.figure(figsize=(10,10))
-    plt.subplot(2, 2, 1)
-    plt.plot(trn_loss, label='trn_loss')
-    plt.title(f"{modelname} trn loss")
-    plt.legend()
-    
-    plt.subplot(2, 2, 2)
-    plt.plot(val_loss, label='val_loss')
-    plt.title(f"{modelname} val loss")
-    plt.legend()
-    
-    plt.subplot(2, 2, 3)
-    plt.plot(trn_acc, label='trn_acc')
-    plt.title(f"{modelname} trn acc")
-    plt.legend()
-    
-    plt.subplot(2, 2, 4)
-    plt.plot(val_acc, label='val_acc')
-    plt.title(f"{modelname} val acc")
-    plt.legend()
-    
-    plt.savefig(f"./results/plots/Report2_{modelname}_trn_val_sep.png")
-    
-
-    return None
 
 def train(model, trn_loader, device, criterion, optimizer):
     """ Train function
@@ -179,7 +129,7 @@ def test(model, tst_loader, device, criterion):
             tst_loss += loss
             acc += torch.sum(torch.argmax(output,dim=1) == labels)
         print(f"TEST FINISHED")
-        print(f"TEST LOSS : {tst_loss/len(tst_loader.dataset):.4f}") # reduction mean default
+        print(f"TEST LOSS : {tst_loss/len(tst_loader.dataset):.4f}") 
         print(f"TEST ACC : {acc/len(tst_loader.dataset):.4f}")
     # write your codes here
 
@@ -207,7 +157,7 @@ def main():
     global EPOCHS
     global BS
     
-    EPOCHS = 12
+    EPOCHS = 20
     BS = 32
     
     ## 1) Dataset objects for training and test datasets
@@ -280,6 +230,64 @@ def main():
     
     
     # write your codes here
+
+def plotting(trn_val_loss, trn_val_acc, modelname='LeNet5'):
+
+    trn_loss = trn_val_loss[0]
+    val_loss = trn_val_loss[1]
+    
+    trn_acc = trn_val_acc[0]
+    val_acc = trn_val_acc[1]
+    
+    x = list(range(1, len(trn_loss)+1))
+
+    plt.figure(figsize=(10,10))
+    plt.subplot(2, 1, 1)
+    plt.plot(x, trn_loss, label='trn_loss', marker='o')
+    plt.plot(x, val_loss, label='val_loss', marker='o')
+    plt.title(f"{modelname} trn val loss")
+    plt.xticks([0,1,5,10,15,20])
+    plt.legend()
+    
+    plt.subplot(2, 1, 2)
+    plt.plot(x, trn_acc, label='trn_acc', marker='o')
+    plt.plot(x, val_acc, label='val_acc', marker='o')
+    plt.title(f"{modelname} trn val acc")
+    plt.xticks([0,1,5,10,15,20])
+    plt.legend()
+    
+    
+    plt.savefig(f"./results/plots/Report2_{modelname}_trn_val_com.png")
+    
+    plt.figure(figsize=(10,10))
+    plt.subplot(2, 2, 1)
+    plt.plot(x, trn_loss, label='trn_loss', marker='o')
+    plt.title(f"{modelname} trn loss")
+    plt.xticks([0,1,5,10,15,20])
+    plt.legend()
+    
+    plt.subplot(2, 2, 2)
+    plt.plot(x, val_loss, label='val_loss', marker='o')
+    plt.title(f"{modelname} val loss")
+    plt.xticks([0,1,5,10,15,20])
+    plt.legend()
+    
+    plt.subplot(2, 2, 3)
+    plt.plot(x, trn_acc, label='trn_acc', marker='o')
+    plt.title(f"{modelname} trn acc")
+    plt.xticks([0,1,5,10,15,20])
+    plt.legend()
+    
+    plt.subplot(2, 2, 4)
+    plt.plot(x, val_acc, label='val_acc', marker='o')
+    plt.title(f"{modelname} val acc")
+    plt.xticks([0,1,5,10,15,20])
+    plt.legend()
+    
+    plt.savefig(f"./results/plots/Report2_{modelname}_trn_val_sep.png")
+    
+
+    return None
 
 if __name__ == '__main__':
     main()
