@@ -316,31 +316,18 @@ TEST ACC : 0.9532
 </div>
 </details>
 
+![Report2_CustomMLP_trn_val_com](https://github.com/ma-kjh/Neural-Networks-and-Deep-Learning-2024-1st/assets/132344612/f9fa7992-ff2c-4c7c-aaf0-9be0f19634ff)
 
-![Report2_CustomMLP_trn_val_sep](https://github.com/ma-kjh/Neural-Networks-and-Deep-Learning-2024-1st/assets/132344612/753dd158-0a20-4ff6-a90c-f8de6b513e1f)
 
-![Report2_CustomMLP_trn_val_com](https://github.com/ma-kjh/Neural-Networks-and-Deep-Learning-2024-1st/assets/132344612/740a1c4d-f69d-4d89-a52a-c911f3c3791f)
+![Report2_CustomMLP_trn_val_sep](https://github.com/ma-kjh/Neural-Networks-and-Deep-Learning-2024-1st/assets/132344612/9cb18487-ac4f-4304-bd4f-4df56246b102)
+
+
 
 `First of all, we want to make the model work properly when dataset(test or val) that had not been seen in training will be received. However, as you can see, the gap of training and validation measurements gets bigger when epochs are increased. You should mitigate this effect of overfitting by using some regularization or other techniques.`
 
 
 ### Report 3
 
-```
-Employ at least more than two regularization techniques to improve LeNet-5 model.
-
-You can use whatever techniques if you think they may be helpful to improve the performance.
-
-Verify that they actually help improve the performance.
-
-Keep in mind that when you employ the data augmentation technique, it should be applied only to training data.
-
-So, the modification of provided MNIST class in dataset.py may be needed.
-```
-
-`In our case, we emply two regularization techniques, L2 Regularization (SGD weight decay) and BatchNorm.`
-
-`As you can see, L2 Reg and BatchNorm can improve little bit the validation performance than original one.`
 
 
 <details>
@@ -461,8 +448,11 @@ TEST ACC : 0.9914
 </div>
 </details>
 
-![Report2_LeNet5_trn_val_sep](https://github.com/ma-kjh/Neural-Networks-and-Deep-Learning-2024-1st/assets/132344612/d6a1da9c-a682-41b8-a02d-230d3f17244a)
+![Report2_LeNet5_reg_trn_val_com](https://github.com/ma-kjh/Neural-Networks-and-Deep-Learning-2024-1st/assets/132344612/6607068f-9a18-4a2b-9b94-5634140d2526)
 
-![Report2_LeNet5_trn_val_com](https://github.com/ma-kjh/Neural-Networks-and-Deep-Learning-2024-1st/assets/132344612/ad28a8b7-ed98-47cb-8211-08d46e60b7aa)
 
+![Report2_LeNet5_reg_trn_val_sep](https://github.com/ma-kjh/Neural-Networks-and-Deep-Learning-2024-1st/assets/132344612/388dd726-9d77-4775-aee9-97dfce83cc2c)
+
+
+`In our case, we emply two regularization techniques, L2 Regularization (SGD weight decay) and BatchNorm. As you can see, L2 Reg and BatchNorm can improve little bit the validation performance than original one.`
 
