@@ -28,12 +28,11 @@ Our codebase accesses the datasets from `/data/MNIST_assignment/` by default.
 - LeNet5 : # of Params - 61,706
 - CustomMLP : # of Params - 61,450
 
-
 #### LeNet5
 
 ![Screenshot 2024-04-14 at 16 06 44](https://github.com/ma-kjh/Neural-Networks-and-Deep-Learning-2024-1st/assets/132344612/f0e5d3c0-9ada-478f-9aab-34c143b88cb6)
 
-`In our case, we transform input size (28,28,1) to (32,32,1) because we follow original LeNet5 architecture.`
+`In this case, transform input size (28,28,1) to (32,32,1) because I want to follow original LeNet5 paper.`
 
 ```python
     def __init__(self):
@@ -70,20 +69,14 @@ Our codebase accesses the datasets from `/data/MNIST_assignment/` by default.
         ## total # of params : 49,200 + 2,352 + 2,352 + 2,352 + 2,352 + 2,352 + 490 = 61,450
 ```
 
-LeNet5 has 61,706 parameters and CustomMLP has 61,450 parameters. 
+LeNet5 has 61,706 parameters and CustomMLP has 61,450 parameters. They have similar parameters.
 
 
 ### Report 2
 
-```
-Plot above statistics, average loss value and accuracy, for training and testing.
 
-It is fine to use the test dataset as a validation dataset.
+#### LeNet5 trn val
 
-Therefore, you will have four plots for each model: loss and accuracy curves for training and test datasets, respectively.
-```
-
-`LeNet5 trn val`
 ```
 12|12 - TRAIN LOSS : 1.4692
 12|12 - TRAIN ACC : 0.9934
@@ -99,7 +92,7 @@ Therefore, you will have four plots for each model: loss and accuracy curves for
 
 
 
-`CustomMLP trn val`
+#### CustomMLP trn val
 ```
 12|12 - TRAIN LOSS : 1.5100
 12|12 - TRAIN ACC : 0.9517
