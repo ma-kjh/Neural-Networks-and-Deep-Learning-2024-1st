@@ -32,6 +32,15 @@ To train the models, run the `main.py` script. This will train both the RNN and 
 python main.py
 ```
 
+```python
+### Configuration ###
+seq_length = 30
+batch_size = 128
+num_epochs = 20
+learning_rate = 0.002
+#####################
+```
+
 ### Generating Text
 
 To generate text using the trained model, run the `generate.py` script. This script will load the last model and generate text based on the provided seed texts.
@@ -45,6 +54,9 @@ python generate.py
 ### Training and Validation Loss
 
 The training and validation losses for both vanilla RNN and LSTM models are plotted and saved as `loss_plot.png`. Below is the comparison of the training and validation loss curves:
+
+
+![loss_plot](https://github.com/ma-kjh/Neural-Networks-and-Deep-Learning-2024-1st/assets/132344612/e2fc8871-6d81-4b20-953f-172adf219933)
 
 
 ### Model Performance Comparison
