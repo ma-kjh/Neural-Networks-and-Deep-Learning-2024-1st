@@ -68,20 +68,42 @@ The performance of the vanilla RNN and LSTM models is compared based on the vali
 The `generate.py` script generates text using the trained LSTM model. Five different seed texts are used, and 100 characters are generated for each seed text. Below are some examples of generated text:
 
 ```
------ Seed text: "KING RICHARD III:"
------ Generated text: "KING RICHARD III: now, the straves are bearly dost not the sicks me and me the perise of thing the stand his come of father the be te the ha the mand the "
+temperature :  100.0
+Seed: "KING RICHARD III:"
+Generated text: "KING RICHARD III:FoF&y'nbvj-DhiSLe:?cwvgvrBLFUSlarvzrOKNCMZeLuPK:CQFhYM?hEwwVRcBLn,Z!d
+.CN;xKWjftWAUPUAlEJmthweaJNQSM"
 
------ Seed text: "LADY ANNE:"
------ Generated text: "LADY ANNE: I fook is not the seald the mark of the stand of thing the stands the server the stand his the ming the stand his the the with he come of"
+temperature :  10.0
+Seed: "KING RICHARD III:"
+Generated text: "KING RICHARD III:
+EC.
+ClORTI!'ShW,ssorc!agoyes
+awQ;aqumy?s KneTS,gSigtco;'uqw' yOs!CLVrNxtydogh'd O.D
+harianiq;oow? r"
 
------ Seed text: "BUCKINGHAM:"
------ Generated text: "BUCKINGHAM: the beally the speak of the stants his to the hath the hather the hath and the hath the hath the hath the hath the hath the hath the hath the hath the"
+temperature :  1.0
+Seed: "KING RICHARD III:"
+Generated text: "KING RICHARD III:
+Know'st not unlose the behended;
+For, by the way, I'll sort ocquer blame
+Menenius, and those senato"
 
------ Seed text: "DUCHESS OF YORK:"
------ Generated text: "DUCHESS OF YORK: the hath the hath the hath the hath the hath the hath the hath the hath the hath the hath the hath the hath the hath the hath the hath"
+temperature :  0.1
+Seed: "KING RICHARD III:"
+Generated text: "KING RICHARD III:
+Why, Buckingham, nor you;
+You have been too rough, something
+too rough, something
+too rough, someth"
 
------ Seed text: "QUEEN ELIZABETH:"
------ Generated text: "QUEEN ELIZABETH: the hath the hath the hath the hath the hath the hath the hath the hath the hath the hath the hath the hath the hath the hath the hath"
+temperature :  0.01
+Seed: "KING RICHARD III:"
+Generated text: "KING RICHARD III:
+Why, Buckingham, I say, I would be king,
+
+BUCKINGHAM:
+Then I salute your grace of York as mother,
+A"
 ```
 
 ### Softmax Temperature
