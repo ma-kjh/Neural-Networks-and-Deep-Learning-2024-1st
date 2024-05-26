@@ -65,7 +65,7 @@ The performance of the vanilla RNN and LSTM models is compared based on the vali
 
 ### Text Generation
 
-The `generate.py` script generates text using the trained LSTM model. Five different seed texts are used, and 100 characters are generated for each seed text. Below are some examples of generated text:
+The `generate.py` script generates text using the trained LSTM model. Five different temperatures texts are used, and 100 characters are generated for each seed text. Below are examples of generated text:
 
 ```
 temperature :  100.0
